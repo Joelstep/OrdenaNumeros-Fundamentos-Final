@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdenaNumeros", "OrdenaNumeros\OrdenaNumeros.csproj", "{33CD0FBC-6906-4075-9488-7C8B84AFA4B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pruebas_Actualización", "Pruebas_Actualización\Pruebas_Actualización.csproj", "{F6B90EBB-34D2-44C3-88D0-56F84560CF4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{33CD0FBC-6906-4075-9488-7C8B84AFA4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33CD0FBC-6906-4075-9488-7C8B84AFA4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33CD0FBC-6906-4075-9488-7C8B84AFA4B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B90EBB-34D2-44C3-88D0-56F84560CF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B90EBB-34D2-44C3-88D0-56F84560CF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B90EBB-34D2-44C3-88D0-56F84560CF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B90EBB-34D2-44C3-88D0-56F84560CF4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

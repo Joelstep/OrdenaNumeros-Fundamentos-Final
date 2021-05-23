@@ -11,6 +11,23 @@ namespace OrdenaNumeros
         private Button[,] matrizBotones;
         private int posicionFila, posicionColumna;
 
+        private bool Condicionvictoria = true;
+
+        public int[,] Matrizvalores
+        {
+            get
+            {
+                return matrizValores;
+            }
+        }
+        public bool CondicionVictoria
+        {
+            get
+            {
+                return Condicionvictoria;
+            }
+        }
+
         /// <summary>
         /// Constructor de la clase Form1
         /// </summary>
@@ -64,10 +81,26 @@ namespace OrdenaNumeros
             matrizBotones[3, 3] = boton16;
         }
 
-        /// <summary>
-        /// Inicializa la matriz de valores, asignando los numeros a organizar
-        /// </summary>
-        private void InicializaMatrizValores()
+        public void AsignaValoresMatrizes()
+        {
+
+
+            int valor = 0;
+
+            //Inicialmente se asignan los números del 0 al 15 en toda la matriz
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    matrizValores[i, j] = valor;
+                    valor++;
+                }
+            }
+        }
+            /// <summary>
+            /// Inicializa la matriz de valores, asignando los numeros a organizar
+            /// </summary>
+            private void InicializaMatrizValores()
         {
             int valor = 0;
 
@@ -319,10 +352,10 @@ namespace OrdenaNumeros
         /// <summary>
         /// Esta función valida si todos los números están organizados
         /// </summary>
-        private void EvaluaCondicionVictoria()
+        public void EvaluaCondicionVictoria()
         {
             //Partimos del supuesto que ya logramos la condición de victoria
-            bool condicionVictoria = true;
+            Condicionvictoria = true;
 
             int valorBuscado = 0;
 
@@ -339,20 +372,20 @@ namespace OrdenaNumeros
                     {
                         // Validamos si estamos en la última casilla, el valor existente es 0,
                         // el valor buscado ya llegó a 16 y la condición de victoria sigue siendo true
-                        if (matrizValores[i, j] == 0 && valorBuscado == 16 && condicionVictoria == true)
-                            condicionVictoria = true;
+                        if (matrizValores[i, j] == 0 && valorBuscado == 16 && Condicionvictoria == true)
+                            Condicionvictoria = true;
 
                         // De lo contrario, es porque estamos en cualquier otra casilla y los valores
                         // Todavía no son iguales
                         else
-                            condicionVictoria = false;
+                            Condicionvictoria = false;
                     }
                 }
             }
 
 
             //Si la condición de victoria se logró, mostramos el mensaje de Victoria y desactivamos los botones
-            if (condicionVictoria == true)
+            if (Condicionvictoria == true)
             {
                 MessageBox.Show("Todos los números organizados, Felicitaciones!", "Victoria Alcanzada!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 InactivaBotones();
